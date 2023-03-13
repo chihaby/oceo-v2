@@ -1,10 +1,15 @@
-import React from 'react'
-import Navbar from './Navbar'
+import Hero from './Hero'
+import About from './About'
+import Music from './Music'
+import Blog from './Blog'
 
 const Layout = () => {
   return (
     <>
-      <Navbar />
+      <Hero />
+      <About />
+      <Music />
+      <Blog />
     </>
   )
 }
