@@ -1,3 +1,10 @@
 .container {
   background-color: var(--primary-color);
+  color: white;
+  padding: 1rem;
+}
+
+.li {
+  cursor: pointer;
+  margin-top: 10px;
 }
