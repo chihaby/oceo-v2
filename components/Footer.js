@@ -25,10 +25,7 @@ const Footer = () => {
                   </li>    
                   <li className={styles.li}>
                     <Link href='/music' passHref><span className={styles.site_map}>Music</span></Link>
-                  </li>
-                  <li className={styles.li}>
-                    <Link href='/courses' passHref><span className={styles.site_map}>Courses</span></Link>
-                  </li>          
+                  </li>         
                 </ul>
               </Col>
           </Col>

@@ -5,7 +5,7 @@
 
 .image {
 object-fit: contain;
-width: 100% !important;
+width: 70% !important;
 position: relative !important;
 height: unset !important;
 }

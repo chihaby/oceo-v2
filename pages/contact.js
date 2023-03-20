@@ -1,12 +1,13 @@
 import { useState } from 'react';
 import { useRouter } from 'next/router';
-import styles from '../styles/Footer.module.css';
+import styles from '../styles/contactPage.module.css';
 // import emailjs from '@emailjs/browser';
 import Spinner from 'react-bootstrap/Spinner';
 import Link from 'next/link';
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
+import Footer from '@/components/Footer';
 
 const Contact = () => {
   const [values, setValues] = useState({
@@ -176,6 +177,7 @@ const Contact = () => {
       </Col>
       </Row>
     </Container>
+    <Footer />
     </div>
   );
 };

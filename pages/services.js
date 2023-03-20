@@ -1,15 +1,14 @@
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import Footer from '@/components/Footer'
+import Footer from '../components/Footer'
 
-const blog = () => {
+const services = () => {
   return (
     <div>
       <Container>
-      <h1>Blog</h1>
         <Row>
-          <Col></Col>
+          Row
         </Row>
       </Container>
       <Footer />
@@ -17,4 +16,4 @@ const blog = () => {
   )
 }
 
-export default blog
+export default services

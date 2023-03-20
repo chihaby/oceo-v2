@@ -3,11 +3,11 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Link from 'next/link'
 import Card from 'react-bootstrap/Card';
-// import styles from '../styles/Blog.module.css'
+import styles from '../styles/Blog.module.css'
 
 const Blog = () => {
   return (
-    <div >
+    <div  className={styles.container}>
       <Container>
         <Row>
           <h1>LATEST BLOG POSTS</h1>

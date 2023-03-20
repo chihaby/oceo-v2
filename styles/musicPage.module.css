@@ -1,0 +1,13 @@
+.container {
+  background-color: var(--fourth-color);
+}
+
+.li {
+  width: 200px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 8px 6px -6px black;
+  text-align: center;
+  font-size: large;
+  font-weight: 550;
+}

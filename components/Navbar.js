@@ -14,9 +14,6 @@ const MENU_LIST = [
     text: 'Music',
     href: '/music'
   },{
-    text: 'Courses',
-    href: '/courses'
-  },{
     text: 'Services',
     href: '/services'
   },{

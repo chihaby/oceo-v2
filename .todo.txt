@@ -1,2 +1,3 @@
 Implement cookie
 Sign up to receive an occasional newsletter
+Add Venmo donation and Paypal
