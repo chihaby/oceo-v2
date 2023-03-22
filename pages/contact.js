@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { useRouter } from 'next/router';
 import styles from '../styles/contactPage.module.css';
-// import emailjs from '@emailjs/browser';
+import emailjs from '@emailjs/browser';
 import Spinner from 'react-bootstrap/Spinner';
-import Link from 'next/link';
+// import Link from 'next/link';
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
@@ -56,15 +56,14 @@ const Contact = () => {
     const templateParams = {
       from_name: values.fullName,
       email: values.email,
-      // phone: values.phone,
       message: values.message,
     };
     emailjs
       .send(
-        process.env.USER_ID,
-        process.env.TEMPLATE_ID,
+        process.env.NEXT_PUBLIC_USER_ID,
+        process.env.NEXT_PUBLIC_TEMPLATE_ID,
         templateParams,
-        process.env.PUBLIC_KEY
+        process.env.NEXT_PUBLIC_PUBLIC_KEY
       )
       .then(
         (response) => {
@@ -110,15 +109,16 @@ const Contact = () => {
   return (
     <div className={styles.container}>
     <Container>
+    <br />
+    <h1>Contact</h1>
       <Row>
-        <Col>
-        <h2>GET IN TOUCH</h2><br />
+        <Col >
+        <br />
           <p className={styles.paragraph}>
             Please fill out the form below and we will get back to you as soon
             as possible.
           </p>
-        {/* <form onSubmit={handleSubmit}> */}
-        <form>
+        <form className={styles.form} onSubmit={handleSubmit}>
           <span>Name</span>
           <br />
           <input
@@ -164,6 +164,7 @@ const Contact = () => {
           <button
             type='subit'
             id='btnsubmit'
+            className={styles.form_submit}
           >
             {' '}
             SUBMIT

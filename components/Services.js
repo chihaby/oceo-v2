@@ -4,9 +4,9 @@ import Col from 'react-bootstrap/Col'
 import Image from 'next/image'
 import logo from '../public/img/logo.png'
 import Link from 'next/link'
-import styles from '../styles/Booking.module.css'
+import styles from '../styles/Services.module.css'
 
-const Booking = () => {
+const Services = () => {
   return (
     <div>
       <Container>
@@ -14,15 +14,15 @@ const Booking = () => {
           <h1>Services</h1>
         </div>
         <Row>  
-          <Col  xs={{span: 12, order: 2}} md={{span: 6, order: 1}}>
+          <Col  xs={{span: 12, order: 2}} md={{span: 6, order: 2}}>
             <div className={styles.iamge__container}>
               <Image src={logo} alt="about oceo guitar player" prop="fill" className={styles.image}/>
             </div>
           </Col>  
-          <Col xs={{span: 12, order: 1}} md={{span: 6, order: 2}}>
+          <Col xs={{span: 12, order: 1}} md={{span: 6, order: 1}}>
             <p>Events - Private parties. Gigs, Weddings ... etc</p>
             <p>If you have music for your project weather it is a solo a song or soundtrack</p>
-            <Link href={"/about"}>VIEW ALL Booking</Link>
+            <Link href={"/services"}>VIEW ALL Services</Link>
           </Col>    
         </Row>
       </Container>
@@ -30,4 +30,4 @@ const Booking = () => {
   )
 }
 
-export default Booking
+export default Services

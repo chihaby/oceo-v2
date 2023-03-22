@@ -2,7 +2,7 @@ import Hero from './Hero'
 import About from './About'
 import Music from './Music'
 import Blog from './Blog'
-import Booking from './Booking'
+import Booking from './Services'
 
 const Layout = () => {
   return (

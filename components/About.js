@@ -8,19 +8,20 @@ import styles from '../styles/About.module.css'
 
 const About = () => {
   return (
-    <div>
+    <div className={styles.container}>
       <Container>
         <div>
-          <h1>About Me</h1>
+          <h1>About</h1>
         </div>
         <Row>        
-          <Col  xs={{span: 12, order: 2}} md={{span: 6, order: 1}}>
+          {/* <Col  xs={{span: 12, order: 2}} md={{span: 6, order: 1}}>
             <div className={styles.iamge__container}>
               <Image src={logo} alt="about oceo guitar player" prop="fill" className={styles.image}/>
             </div>
-          </Col>
-          <Col xs={{span: 12, order: 1}} md={{span: 6, order: 2}}>
-            <p>oceo evora. Born in Casablanca, Morocco. Oceo grew up in a lively and vibrant music culture. The incredible passion and joy of the Mediterranean music of Morocco is a fusion of Arabic, Spanish, French and Greek musical influences fueled by centuries of trade between the Mediterranean’s dynamic and rich cultures. The North African music scene is inseparable from its Mediterranean neighbors from whom it shares a rich history of melodic decadence. Oceo heard the rhythms and beats that would be a soundtrack to his life on every Casablancan beach and in every well traveled coffee shop but it was not until his mid teens that he was introduced to the guitar and began to play. Largely self taught - he would play, western pop, rock, blues and jazz, with family and friends. Later he would hear a Spanish guitar solo on a Casablancan beach and he had an epiphany. This instrument produced the most pleasing notes he had ever heard. ....</p>
+          </Col> */}
+          {/* <Col xs={{span: 12, order: 1}} md={{span: 6, order: 2}}> */}
+          <Col className={styles.about}>
+            <p>oceo evora. Born in Casablanca, Morocco. Oceo grew up in a lively and vibrant music culture. The incredible passion and joy of the Mediterranean music of Morocco is a fusion of Arabic, Spanish, French and Greek musical influences fueled by centuries of trade between the Mediterranean’s dynamic and rich cultures. The North African music scene is inseparable from its Mediterranean neighbors from whom it shares a rich history of melodic decadence. Oceo heard the rhythms and beats that would be a soundtrack to his life on every Casablancan beach and in every well traveled ....</p>
             <Link href={"/about"}>FIND OUT MORE</Link>
           </Col>
         </Row>

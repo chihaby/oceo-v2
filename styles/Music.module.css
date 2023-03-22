@@ -1,3 +1,8 @@
 .container {
   background-color: var(--fourth-color);
 }
+
+.paragraph {
+  padding: 2rem;
+  line-height: 1.8;
+}

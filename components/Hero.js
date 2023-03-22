@@ -18,7 +18,7 @@ const Hero = () => {
             <div className={styles.hero__left} >
               <span className={styles.strapline}>Left 1</span>
               <p className={styles.description}> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
-              <button className={styles.cta}>Learn more</button>
+              <button className={styles.cta}>Sign Up</button>
             </div>
 
           </Col>

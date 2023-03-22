@@ -17,9 +17,6 @@ const MENU_LIST = [
     text: 'Services',
     href: '/services'
   },{
-    text: 'Blog',
-    href: '/blog'
-  },{
     text: 'Contact',
     href: '/contact'
   }
@@ -32,7 +29,7 @@ const Navbar = () => {
     <div style={{backgroundColor: '#F0A04B'}}>
       <Container>
         <nav className='nav'>
-          <Link href={"/"}>
+          <Link href={"/"} legacyBehavior>
             <a onClick={() => setActiveIdx(0)}> 
               <span className='logo'>Odul</span>
             </a>
