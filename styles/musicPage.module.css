@@ -22,7 +22,7 @@
 
 .list_item {
   width: 200px;
-  border-radius: 20px;
+  border-radius: 4px;
   margin-bottom: 20px;
   box-shadow: 0 8px 6px -6px black;
   text-align: center;
@@ -36,7 +36,7 @@
   }
 
   .image {
-    width: 65% !important; 
+    width: 60% !important; 
   }
 
   .list_group {

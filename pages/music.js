@@ -6,7 +6,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import Footer from '../components/Footer'
 import styles from '../styles/musicPage.module.css'
-import logo from '../public/img/logo.png'
+import oceo from '../public/img/oceo.png'
 
 const music = () => {
 
@@ -21,7 +21,7 @@ const music = () => {
         <Row>
           <Col xs={{span: 12, order: 1}} md={{span: 6, order: 1}}>
             <div className={styles.iamge__container}>
-              <Image src={logo} alt="oceo music image" prop="fill" className={styles.image}/>
+              <Image src={oceo} alt="oceo music image" prop="fill" className={styles.image}/>
             </div> 
           </Col>
           <Col  xs={{span: 12, order: 2}} md={{span: 6, order: 2}} >
@@ -41,7 +41,7 @@ const music = () => {
                 </Link>
               </ListGroup.Item>
               <ListGroup.Item className={styles.list_item}>
-                <Link href="https://amazon.com/music/player/albums/B07TTYJ453?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_5Koahl7OW0F4oCygvYvidUQv9" passHref>
+                <Link href="https://amazon.com/music/player/albums/B07TTYJ453?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_5Koahl7OW0F4oCygvYvidUQv9" passHref legacyBehavior>
                   <a target="_blank" rel="noopener noreferrer">
                     Amazon
                   </a>

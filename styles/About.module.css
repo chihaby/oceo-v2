@@ -9,13 +9,22 @@
 }
 
 .image {
-object-fit: contain;
-width: 60% !important;
-position: relative !important;
-height: unset !important;
+  object-fit: contain;
+  width: 60% !important;
+  position: relative !important;
+  height: unset !important;
 }
 
 @media screen and (min-width: 768px) {
+  .container {
+    height: 40vh;
+  }
+  .about {
+    padding: 2rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
   .container {
     height: 65vh;
   }
@@ -23,7 +32,6 @@ height: unset !important;
     padding: 2rem 12rem 2rem 12rem;
   }
 }
-
 /* Fix the screen width */
 @media screen and (min-width: 1325px) {
   .container {

@@ -2,24 +2,6 @@
   background-color: var(--fourth-color);
 }
 
-.image__container div{
-  width: 100%;
-  position: unset !important;
-}
-
-.image {
-object-fit: contain;
-width: 100% !important;
-position: relative !important;
-height: unset !important;
-}
-
-@media screen and (min-width: 768px) {
-  .image__container div{
-    width: 100%;
-  }
-
-.image {
- width: 70% !important;
-}
+.a__tag {
+  text-decoration: none;
 }

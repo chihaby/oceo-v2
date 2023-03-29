@@ -1,9 +1,9 @@
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import Link from 'next/link'
+// import Link from 'next/link'
 import Image from 'next/image'
-import logo from '../public/img/logo.png'
+import oceo from '../public/img/oceo.png'
 import Footer from '../components/Footer'
 import styles from '../styles/aboutPage.module.css'
 
@@ -17,7 +17,7 @@ const about = () => {
         <Row>
           <Col xs={12} md={6}>
             <div className={styles.iamge__container}>
-              <Image src={logo} alt="oceo music image" className={styles.image}/>
+              <Image src={oceo} alt="oceo music image" className={styles.image}/>
             </div> 
           </Col>
           <Col xs={12} md={6}>

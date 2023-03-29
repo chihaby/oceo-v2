@@ -10,7 +10,11 @@ const Blog = () => {
     <div  className={styles.container}>
       <Container>
         <Row>
+          <br />
+          <div>
           <h1>LATEST BLOG POSTS</h1>
+          </div>
+          <br />
           <Col>
           <Card style={{ width: '18rem' }}>
             <Card.Img variant="top" src="holder.js/100px180" />

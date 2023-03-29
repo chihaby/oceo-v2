@@ -5,8 +5,8 @@ import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
 import Image from 'next/image'
 import styles from '../styles/Hero.module.css'
-// import oceo from '../public/img/oceo.png'
-import logo from '../public/img/logo.png'
+import oceo from '../public/img/oceo.png'
+// import logo from '../public/img/logo.png'
 
 
 const Hero = () => {
@@ -25,7 +25,7 @@ const Hero = () => {
           <Col xs={{span: 12, order: 1}} md={{span: 6, order: 2}} >      
             <Card className={styles.hero__right}>
               <div className={styles.iamge__container}>
-                <Image src={logo} alt="oceo music image" prop="fill" className={styles.image}/>
+                <Image src={oceo} alt="oceo music image" prop="fill" className={styles.image}/>
               </div> 
               <Card.Body>
                 <Card.Title>Album Stories</Card.Title>
