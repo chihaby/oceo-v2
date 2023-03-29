@@ -18,7 +18,7 @@ const Services = () => {
         </div>
         <Row >  
           <Col>
-            <a href="/contact" className={styles.a__tag}>
+            <Link href="/contact" className={styles.a__tag}>
               <Card style={{ width: '20rem' }}>
                 <Card.Body>
                 <Card.Title>Private Events</Card.Title>
@@ -30,7 +30,7 @@ const Services = () => {
                   <Link href={'/contact'}>Get in touch</Link>
                 </Card.Body>
               </Card>
-            </a>
+            </Link>
           </Col>          
           {/* <Col>
             <a href="/contact">
@@ -62,7 +62,7 @@ const Services = () => {
             </a>
           </Col> */}
           <Col>
-            <a href="/contact">
+            <Link href="/contact">
               <Card style={{ width: '20rem' }}>
                 <Card.Body>
                   <Card.Title>Apperance and Interviews</Card.Title>
@@ -73,7 +73,7 @@ const Services = () => {
                   <Link href={'/contact'}>Get in touch</Link>
                 </Card.Body>
               </Card>
-            </a>
+            </Link>
           </Col>
         </Row>
         <br /><br />

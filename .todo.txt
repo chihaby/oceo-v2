@@ -2,3 +2,4 @@ Implement cookie
 Sign up to receive an occasional newsletter
 Add Venmo donation and Paypal
 Add Meta component for SEO
+Fix sticky footer on ipad 

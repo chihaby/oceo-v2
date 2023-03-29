@@ -3,18 +3,6 @@
   line-height: 1.8;
 }
 
-.image__container div{
-  width: 100%;
-  position: unset !important;
-}
-
-.image {
-  object-fit: contain;
-  width: 60% !important;
-  position: relative !important;
-  height: unset !important;
-}
-
 @media screen and (min-width: 768px) {
   .container {
     height: 40vh;

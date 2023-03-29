@@ -9,7 +9,7 @@ const Footer = () => {
     <div className={styles.container}>
       <Container>
         <Row>
-          <Col xs={12} md={3}><h1>Odul</h1></Col>
+          <Col xs={12} md={3}><Link href='/' passHref><span style={{textDecoration: 'none', fontSize: '32px', fontWeight: '500'}}>Odul</span></Link></Col>
           <Col xs={6} md={3}>
               <span>
                 <i className="fa fa-bars"> SITE MAP</i>
@@ -35,9 +35,9 @@ const Footer = () => {
               <li className={styles.li}>
                 <Link href='/services' passHref><span className={styles.site_map}>Services</span></Link>
               </li>   
-              <li className={styles.li}>
+              {/* <li className={styles.li}>
                 <Link href='/blog' passHref><span className={styles.site_map}>Blog</span></Link>
-              </li>           
+              </li>            */}
               <li className={styles.li}>
                 <Link href='/contact' passHref><span className={styles.site_map}>Contact</span></Link>
               </li>
@@ -54,7 +54,13 @@ const Footer = () => {
           </p>
         </div>
           <div className={styles.copyright}>
-            <p> Copyright &copy; 2023 - Website Toro</p>
+            {/* <p> Copyright &copy; 2023 - Oceo Music</p> */}
+ 
+              <span>
+                <i className='fa fa-envelope'>Website</i> 
+              </span>{' '}
+
+            <span>Created by </span><Link href={"https://www.websitetoro.com/"} rel="noopener noreferrer" target="_blank"><span style={{textDecoration: 'none', fontSize: '20px', fontWeight: '400'}}>Website Toro</span></Link>
           </div>
           </Col>
         </Row>

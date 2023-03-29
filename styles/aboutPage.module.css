@@ -5,7 +5,15 @@
 
 .image {
 object-fit: contain;
-width: 70% !important;
+width: 100% !important;
 position: relative !important;
 height: unset !important;
 }
+
+
+@media (min-width: 550px) {
+  .image {
+    width: 70% !important;
+  }
+}
+

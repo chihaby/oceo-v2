@@ -26,6 +26,7 @@ const about = () => {
           </Col>
         </Row>
       </Container>
+      <br />
       <Footer />
     </div>
   )
