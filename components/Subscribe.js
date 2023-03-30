@@ -11,7 +11,7 @@ function Subscribe () {
     setState("LOADING");
     setErrorMessage(null);
     try {
-      const response = await axios.post("/api/newsletter", { email });
+      const response = await axios.post("/api/subscribe", { email });
       setState("SUCCESS");
     } catch (e) {
       setErrorMessage(e.response.data.error);
@@ -22,7 +22,7 @@ function Subscribe () {
   return (
     <div >
       <p>
-        Subscribe and get discounts, new releases, 
+        Subscribe now and never miss out on the latest releases, and exclusive offers. 
       </p>
       <div>
         <input

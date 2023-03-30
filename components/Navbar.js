@@ -31,7 +31,7 @@ const Navbar = () => {
         <nav className='nav'>
           <Link href={"/"} legacyBehavior>
             <a onClick={() => setActiveIdx(0)}> 
-              <span className='logo'>Odul</span>
+              <span className='logo'><em>Oceo</em></span>
             </a>
           </Link>
 

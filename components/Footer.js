@@ -11,12 +11,14 @@ const Footer = () => {
       <Container>
         <Row>
           <Col xs={12} md={3}>
-            <Link href='/' passHref>
-              <span style={{textDecoration: 'none', fontSize: '32px', fontWeight: '500'}}>Odul</span>
+            <Link href='/' passHref style={{ color: 'inherit', textDecoration: 'inherit'}} >
+              <span style={{fontSize: '36px', fontWeight: '600'}}>Oceo</span>
             </Link>
             <Subscribe />
           </Col>
           <Col xs={6} md={3}>
+            <br />
+            <br />
               <span>
                 <i className="fa fa-bars"> SITE MAP</i>
               </span>{' '}
@@ -37,6 +39,7 @@ const Footer = () => {
           </Col>
           <Col xs={6} md={3}>
             <br />
+            <br />
             <ul >         
               <li className={styles.li}>
                 <Link href='/services' passHref><span className={styles.site_map}>Services</span></Link>
@@ -51,6 +54,8 @@ const Footer = () => {
           </Col>
           <Col xs={12} md={3}>
           <div className={styles.contact_email}>
+          <br />
+          <br />
           <p>
             <span>
               <i className='fa fa-envelope'> EMAIL</i> 
@@ -66,7 +71,7 @@ const Footer = () => {
                 <i className='fa fa-envelope'>Website</i> 
               </span>{' '}
 
-            <span>Created by </span><Link href={"https://www.websitetoro.com/"} rel="noopener noreferrer" target="_blank"><span style={{textDecoration: 'none', fontSize: '20px', fontWeight: '400'}}>Website Toro</span></Link>
+            <span>Created by </span><Link style={{ color: 'inherit', textDecoration: 'inherit'}} href={"https://www.websitetoro.com/"} rel="noopener noreferrer" target="_blank"><span style={{textDecoration: 'none', fontSize: '20px', fontWeight: '700'}}><em>Website Toro</em></span></Link>
           </div>
           </Col>
         </Row>

@@ -115,7 +115,7 @@ const Contact = () => {
         <Col >
         <br />
           <p className={styles.paragraph}>
-            Please fill out the form below and we will get back to you as soon
+            Please fill out the form below and I will reach back to you as soon
             as possible.
           </p>
         <form className={styles.form} onSubmit={handleSubmit}>
