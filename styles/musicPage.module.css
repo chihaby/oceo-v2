@@ -3,17 +3,8 @@
   text-align: center;
 }
 
-.image__container div{
-  width: 100%;
-  position: unset !important;
-}
-
 .image {
-  object-fit: contain;
-  width: 80% !important;
-  position: relative !important;
-  height: unset !important;
-  margin-bottom: 20px;
+  display: none;
 }
 
 .list_group {
@@ -35,8 +26,18 @@
     text-align: left;
   }
 
+  .image__container div{
+    width: 100%;
+    position: unset !important;
+  }
+  
   .image {
-    width: 60% !important; 
+    display: block;
+    object-fit: contain;
+    width: 60% !important;
+    position: relative !important;
+    height: unset !important;
+    margin-bottom: 20px;
   }
 
   .list_group {

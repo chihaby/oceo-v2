@@ -2,6 +2,7 @@ import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Link from 'next/link'
+import Subscribe from './Subscribe'
 import styles from '../styles/Footer.module.css'
 
 const Footer = () => {
@@ -9,7 +10,12 @@ const Footer = () => {
     <div className={styles.container}>
       <Container>
         <Row>
-          <Col xs={12} md={3}><Link href='/' passHref><span style={{textDecoration: 'none', fontSize: '32px', fontWeight: '500'}}>Odul</span></Link></Col>
+          <Col xs={12} md={3}>
+            <Link href='/' passHref>
+              <span style={{textDecoration: 'none', fontSize: '32px', fontWeight: '500'}}>Odul</span>
+            </Link>
+            <Subscribe />
+          </Col>
           <Col xs={6} md={3}>
               <span>
                 <i className="fa fa-bars"> SITE MAP</i>

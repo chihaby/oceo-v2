@@ -7,6 +7,7 @@ import Image from 'next/image'
 import styles from '../styles/Hero.module.css'
 import oceo from '../public/img/oceo.png'
 // import logo from '../public/img/logo.png'
+import Subscribe from './Subscribe';
 
 
 const Hero = () => {
@@ -14,23 +15,19 @@ const Hero = () => {
     <div className={styles.container}>
       <Container >
         <Row>
-          <Col xs={{span: 12, order: 2}} md={{span: 6, order: 1}}>
-            <div className={styles.hero__left} >
-              <span className={styles.strapline}>Left 1</span>
-              <p className={styles.description}> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
-              <button className={styles.cta}>Sign Up</button>
-            </div>
-
-          </Col>
-          <Col xs={{span: 12, order: 1}} md={{span: 6, order: 2}} >      
-            <Card className={styles.hero__right}>
-              <div className={styles.iamge__container}>
+        <Col xs={{span: 12, order: 1}} md={{span: 6, order: 1}} >      
+            <Card className={styles.hero__left}>
+              <div className={styles.image__container}>
                 <Image src={oceo} alt="oceo music image" prop="fill" className={styles.image}/>
               </div> 
-              <Card.Body>
-                <Card.Title>Album Stories</Card.Title>
-              </Card.Body>
             </Card>
+          </Col>
+          <Col xs={{span: 12, order: 2}} md={{span: 6, order: 2}}>
+            <div className={styles.hero__right} >
+              <span className={styles.strapline}>Oceo</span>
+              <p className={styles.description}> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+              <Subscribe />
+              </div>
           </Col>
         </Row>
       </Container>

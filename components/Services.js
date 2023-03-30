@@ -19,7 +19,7 @@ const Services = () => {
         <Row >  
           <Col>
             <Link href="/contact" className={styles.a__tag}>
-              <Card style={{ width: '20rem' }}>
+              <Card style={{ width: '18rem' }}>
                 <Card.Body>
                 <Card.Title>Private Events</Card.Title>
                   <Card.Subtitle className="mb-2 text-muted">Card Subtitle</Card.Subtitle>
@@ -32,9 +32,9 @@ const Services = () => {
               </Card>
             </Link>
           </Col>          
-          {/* <Col>
+          <Col>
             <a href="/contact">
-              <Card style={{ width: '16rem' }}>
+              <Card style={{ width: '18rem' }}>
                 <Card.Body>
                   <Card.Title>Guitar Lessons</Card.Title>
                   <Card.Subtitle className="mb-2 text-muted">Card Subtitle</Card.Subtitle>
@@ -47,7 +47,7 @@ const Services = () => {
               </Card>
             </a>
           </Col>
-          <Col>
+          {/* <Col>
             <a href="/contact">
               <Card style={{ width: '16rem' }}>
                 <Card.Body>
@@ -63,7 +63,7 @@ const Services = () => {
           </Col> */}
           <Col>
             <Link href="/contact">
-              <Card style={{ width: '20rem' }}>
+              <Card style={{ width: '18rem' }}>
                 <Card.Body>
                   <Card.Title>Apperance and Interviews</Card.Title>
                   <Card.Subtitle className="mb-2 text-muted">Card Subtitle</Card.Subtitle>
