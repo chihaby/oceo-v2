@@ -32,7 +32,7 @@ function getRequestParams(email) {
   };
 }
 
-export default async (req, res) => {
+const fn = async (req, res) => {
   const { email } = req.body;
 
   if (!email || !email.length) {
@@ -56,4 +56,6 @@ export default async (req, res) => {
     // Report error to Sentry or whatever
   }
 };
+
+export default fn;
 

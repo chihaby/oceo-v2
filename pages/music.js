@@ -16,7 +16,7 @@ const music = () => {
         <br/>
         <h1>Music</h1>
         <br />
-        <p>Album "Stories" is available in all streaming platforms</p>
+        <p>The album Stories by Oceo is available on all streaming platforms</p>
 
         <Row>
           <Col xs={{span: 12, order: 1}} md={{span: 6, order: 1}}>
