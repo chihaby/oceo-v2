@@ -25,7 +25,7 @@ const Hero = () => {
           <Col xs={{span: 12, order: 2}} md={{span: 6, order: 2}}>
             <div className={styles.hero__right} >
               <span className={styles.strapline}>Oceo</span>
-              <p className={styles.description}> Discover the beauty and versatility of the Spanish guitar with sensuous compositions like <em>Evora</em>, <em>The Rose & The Nightingale</em>, <em>Andlusia</em>, <em>Caravan</em> and much more.</p>
+              <p className={styles.description}> Discover the beauty and versatility of the Spanish guitar with sensuous compositions like <em>Evora</em>, <em>The Rose & The Nightingale</em>, <em>Andalusia</em>, <em>Caravan</em> and much more.</p>
               <Subscribe />
               </div>
           </Col>
