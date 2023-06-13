@@ -7,16 +7,20 @@ export default function App({ Component, pageProps }) {
   return (
     <>
       <Navbar />
-      <Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-2CN95RFCCM" />
-      <Script>
-        {`
+      <Script  id="ga-script" strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-2CN95RFCCM" />
+      <Script
+        id="ga-script"
+        dangerouslySetInnerHTML={{
+          __html: `
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
         
           gtag('config', 'G-2CN95RFCCM');
-        `}
-      </Script>
+        `,
+        }}
+
+      />
       <Component {...pageProps} />
     </>
   )
