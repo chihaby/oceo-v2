@@ -32,7 +32,7 @@ const Services = () => {
               </Card>
             </Link>
           </Col>          
-          <Col>
+          {/* <Col>
             <Link href="/contact" style={{ color: 'inherit', textDecoration: 'inherit'}}>
               <Card className={styles.services}>
                 <Card.Body>
@@ -46,7 +46,7 @@ const Services = () => {
                 </Card.Body>
               </Card>
             </Link>
-          </Col>
+          </Col> */}
           {/* <Col>
             <a href="/contact">
               <Card style={{ width: '16rem' }}>

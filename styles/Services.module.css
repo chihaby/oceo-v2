@@ -3,9 +3,8 @@
 }
 
 .services {
-  width: 18rem;
+  width: 25rem;
   transition: all 500ms ease-in-out;
-  width: 20rem;
   margin-bottom: 25px;
 }
 .services:hover {

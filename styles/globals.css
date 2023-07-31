@@ -6,14 +6,19 @@ Large	lg	≥992px
 Extra large	xl	≥1200px
 Extra extra large	xxl	≥1400px */
 
-
-
 :root {
+  --primary-color: #272829;
+  --secondary-color: #61677A;
+  --third-color: #D8D9DA;
+  --fourth-color: #FFF6E0;
+}
+
+/* :root {
   --primary-color: #183A1D;
   --secondary-color: #F0A04B;
   --third-color: #E1EEDD;
   --fourth-color: #FEFBE9;
-}
+} */
 
 * {
   box-sizing: border-box;
@@ -42,7 +47,7 @@ header {
   padding: 16px;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--secondary-color);
+  background-color: var(--primary-color);
 }
 
 .nav__menu-bar {

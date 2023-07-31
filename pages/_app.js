@@ -19,7 +19,6 @@ export default function App({ Component, pageProps }) {
           gtag('config', 'G-2CN95RFCCM');
         `,
         }}
-
       />
       <Component {...pageProps} />
     </>

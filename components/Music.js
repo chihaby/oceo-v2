@@ -19,8 +19,8 @@ const Music = () => {
             <YoutubeEmbed />
           </Col>
           <Col  className={styles.paragraph}  xs={{span: 12, order: 2}} md={{span: 6, order: 1}}>
-            <h2>Andalusia</h2>
-            <p >Is the most intimate song I have ever written. Originally it was accompanied by a string section. I have achieved perfect harmony between strings and guitar in the past, but this time something was different as if the guitar wanted to be alone. So I rerecorded the piece with a deep emphasis on the feeling and gave much attention to the performance without incorporating other instruments like strings, bass, percussion, etc. The song sounded full, expressive, and storytelling. I did not want to lose any of these elements. So I left it alone. I hope it communicates to you the same way it comminicates me. Enjoy and thank you for listening.</p>   
+            <h2>Andalucia</h2>
+            <p>Instrumental Spanish guitar composition accompanied by strings</p>   
             <div>
               <Link href={"/music"}>ALL MUSIC RELEASES</Link>
             </div>       

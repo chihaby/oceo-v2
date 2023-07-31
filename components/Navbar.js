@@ -26,12 +26,12 @@ const Navbar = () => {
   const [navActive, setNavActive] = useState(false);
   const [activeIdx, setActiveIdx] = useState(0);
   return (
-    <div style={{backgroundColor: '#F0A04B'}}>
+    <div style={{backgroundColor: '#272829'}}>
       <Container>
         <nav className='nav'>
           <Link href={"/"} legacyBehavior>
             <a onClick={() => setActiveIdx(0)}> 
-              <span className='logo'><em>Oceo</em></span>
+              <span className='logo'><em style={{color: 'white'}}>Oceo</em></span>
             </a>
           </Link>
 

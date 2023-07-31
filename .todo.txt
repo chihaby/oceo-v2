@@ -3,3 +3,5 @@ Add Venmo donation and Paypal
 Add Meta component for SEO
 Fix sticky footer on ipad 
 
+color palette
+https://colorhunt.co/
