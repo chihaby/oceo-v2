@@ -1,0 +1,16 @@
+Google API
+
+oceo google sheets
+
+https://docs.google.com/spreadsheets/d/1cIfE__V3bFgTFfljnU1axYYfPO4Z8nYObIvG2wnlkrk/edit?gid=0#gid=0
+
+
+chihaby
+
+https://docs.google.com/spreadsheets/d/12qQNjjBLPPtO1ktFiLOrSs6-M8PUAculBv4BLijrX7I/edit?gid=0#gid=0
+
+Link
+
+https://docs.google.com/spreadsheets/d/12qQNjjBLPPtO1ktFiLOrSs6-M8PUAculBv4BLijrX7I/edit?usp=sharing
+
+service account email: oceo-36@oceo-452819.iam.gserviceaccount.com
