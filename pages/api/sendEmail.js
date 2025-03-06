@@ -39,7 +39,7 @@ export default async function handler(req, res) {
       to: req.body.email,
       subject: "Your PDF Download Link",
       text: `Thank you for signing up! Here is your PDF download link for Evora tabs. Have fun!
-      https://oceomusic.com/path-to-pdf.pdf`,
+      https://oceomusic.com/tabs/evora.pdf`,
     };
 
     const info = await transporter.sendMail(mailOptions);
