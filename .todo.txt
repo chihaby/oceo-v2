@@ -8,3 +8,5 @@ https://colorhunt.co/
 
 
 Service account email: oceo-36@oceo-452819.iam.gserviceaccount.com
+
+Hide credentials folder

@@ -10,6 +10,7 @@ export default async function handler(req, res) {
     return res.status(405).json({ error: "Method Not Allowed" });
 
   const { email } = req.body;
+  console.log("email from saveToMailchimp: ", email);
 
   try {
     await mailchimp.lists.addListMember(process.env.MAILCHIMP_AUDIENCE_ID, {

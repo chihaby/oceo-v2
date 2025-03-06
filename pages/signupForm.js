@@ -15,11 +15,11 @@ const SignupForm = () => {
     });
 
     // Save to Mailchimp
-    // await fetch("/api/saveToMailchimp", {
-    //   method: "POST",
-    //   headers: { "Content-Type": "application/json" },
-    //   body: JSON.stringify({ email }),
-    // });
+    await fetch("/api/saveToMailchimp", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email }),
+    });
 
     // Send Email with PDF Link
     // await fetch("/api/sendEmail", {
