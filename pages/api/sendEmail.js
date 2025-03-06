@@ -1,31 +1,52 @@
 import nodemailer from "nodemailer";
+import { google } from "googleapis";
+
+const OAuth2 = google.auth.OAuth2;
+
+// OAuth2 Client Setup
+const oauth2Client = new OAuth2(
+  process.env.GMAIL_CLIENT_ID,
+  process.env.GMAIL_CLIENT_SECRET,
+  "https://developers.google.com/oauthplayground"
+);
+
+oauth2Client.setCredentials({
+  refresh_token: process.env.GMAIL_REFRESH_TOKEN,
+});
 
 export default async function handler(req, res) {
-  if (req.method !== "POST")
-    return res.status(405).json({ error: "Method Not Allowed" });
-
-  const { email } = req.body;
-
-  const transporter = nodemailer.createTransport({
-    service: "Gmail",
-    auth: {
-      user: process.env.EMAIL_USER,
-      pass: process.env.EMAIL_PASS,
-    },
-  });
-
-  const mailOptions = {
-    from: process.env.EMAIL_USER,
-    to: email,
-    subject: "Your PDF Download Link",
-    html: `<p>Thanks for signing up! Click the link below to download your PDF:</p>
-           <a href="https://yourwebsite.com/files/sample.pdf">Download PDF</a>`,
-  };
+  if (req.method !== "POST") {
+    return res.status(405).json({ message: "Method Not Allowed" });
+  }
 
   try {
-    await transporter.sendMail(mailOptions);
-    res.status(200).json({ message: "Email sent successfully!" });
+    const accessToken = await oauth2Client.getAccessToken();
+
+    const transporter = nodemailer.createTransport({
+      service: "gmail",
+      auth: {
+        type: "OAuth2",
+        user: process.env.EMAIL_USER,
+        clientId: process.env.GMAIL_CLIENT_ID,
+        clientSecret: process.env.GMAIL_CLIENT_SECRET,
+        refreshToken: process.env.GMAIL_REFRESH_TOKEN,
+        accessToken: accessToken.token,
+      },
+    });
+
+    const mailOptions = {
+      from: `"oceomusic.com" <${process.env.EMAIL_USER}>`,
+      to: req.body.email,
+      subject: "Your PDF Download Link",
+      text: `Thank you for signing up! Here is your PDF download link for Evora tabs. Have fun!
+      https://oceomusic.com/path-to-pdf.pdf`,
+    };
+
+    const info = await transporter.sendMail(mailOptions);
+    console.log("Email sent:", info.response);
+    res.status(200).json({ success: true, message: "Email sent successfully" });
   } catch (error) {
-    res.status(500).json({ error: error.message });
+    console.error("Error sending email:", error);
+    res.status(500).json({ success: false, error: error.message });
   }
 }

@@ -15,11 +15,11 @@ const SignupForm = () => {
     });
 
     // Save to Mailchimp
-    await fetch("/api/saveToMailchimp", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ email }),
-    });
+    // await fetch("/api/saveToMailchimp", {
+    //   method: "POST",
+    //   headers: { "Content-Type": "application/json" },
+    //   body: JSON.stringify({ email }),
+    // });
 
     // Send Email with PDF Link
     // await fetch("/api/sendEmail", {
@@ -27,6 +27,25 @@ const SignupForm = () => {
     //   headers: { "Content-Type": "application/json" },
     //   body: JSON.stringify({ email }),
     // });
+
+    try {
+      const response = await fetch("/api/sendEmail", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email }),
+      });
+
+      const data = await response.json();
+      if (data.success) {
+        alert("Check your email for the PDF download link!");
+      } else {
+        alert("Error sending email: " + data.error);
+      }
+    } catch (error) {
+      console.error("Signup error:", error);
+    }
+
+    // Check response
 
     setMessage("Signup successful! Check your email for the PDF.");
   };
