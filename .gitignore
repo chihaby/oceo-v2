@@ -15,6 +15,9 @@
 # production
 /build
 
+# credentials
+/credentials
+
 # misc
 .DS_Store
 *.pem
@@ -31,3 +34,7 @@ yarn-error.log*
 
 # vercel
 .vercel
+
+#notes
+.notes.txt
+.todo.txt

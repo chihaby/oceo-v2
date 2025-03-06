@@ -48,7 +48,7 @@ const SignupForm = () => {
     // Check response
 
     setMessage(
-      "Signup successful! Check your email for the PDF. Also check your spam/junk folder. Have fun!"
+      "Signup successful! Check your email for the PDF. \n Make sure to check your spam/junk folder as well. \nHave fun!"
     );
   };
 
