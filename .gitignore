@@ -16,7 +16,7 @@
 /build
 
 # credentials
-credentials/
+/credentials/
 
 # misc
 .DS_Store

@@ -1,5 +1,5 @@
 import { google } from "googleapis";
-import credentials from "../../credentials/chiCredentials.json";
+import credentials from "../../credentials/oceoCredentials.json";
 
 export default async function handler(req, res) {
   if (req.method !== "POST") {
