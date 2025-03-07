@@ -16,7 +16,7 @@
 /build
 
 # credentials
-/credentials
+credentials/
 
 # misc
 .DS_Store
@@ -32,9 +32,14 @@ yarn-error.log*
 .env*.local
 .env
 
+
+
 # vercel
 .vercel
 
 #notes
 .notes.txt
 .todo.txt
+
+echo ".env" >> .gitignore
+
