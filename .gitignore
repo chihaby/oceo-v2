@@ -16,7 +16,7 @@
 /build
 
 # credentials
-!credentials/oceoCredentials.json
+/credentials/oceoCredentials.json
 
 # misc
 .DS_Store
