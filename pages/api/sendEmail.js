@@ -1,5 +1,6 @@
 import nodemailer from "nodemailer";
 import { google } from "googleapis";
+import jwt from "jsonwebtoken";
 
 const OAuth2 = google.auth.OAuth2;
 
@@ -34,21 +35,28 @@ export default async function handler(req, res) {
       },
     });
 
+    // Generate a secure, temporary token (valid for 15 minutes)
+    const token = jwt.sign({ email: req.body.email }, process.env.JWT_SECRET, {
+      expiresIn: "15m",
+    });
+
+    const secureLink = `https://oceomusic.com/api/download?token=${token}`;
+
     const mailOptions = {
       from: `"oceomusic.com" <${process.env.EMAIL_USER}>`,
       to: req.body.email,
-      subject: "Your PDF Download Link",
+      subject: "Your Secure PDF Download Link",
       html: `
-      <p>Thank you for signing up!</p>
-      <p>Click the link below to download your PDF:</p>
-      <a href="https://oceomusic.com/tabs/evora.pdf" target="_blank">Download PDF</a>
-      <p>Have fun!</p>
-      <p>OCEO</p>
-    `,
+          <p>Thank you for signing up!</p>
+          <p>Click the link below to download your PDF (expires in 15 minutes):</p>
+          <a href="${secureLink}" target="_blank">Download PDF</a>
+          <p>Have fun!</p>
+          <p>OCEO</p>
+        `,
     };
 
     const info = await transporter.sendMail(mailOptions);
-    console.log("Email sent:", info.response);
+    // console.log("Email sent:", info.response);
     res.status(200).json({ success: true, message: "Email sent successfully" });
   } catch (error) {
     console.error("Error sending email:", error);

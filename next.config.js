@@ -4,9 +4,9 @@ const nextConfig = {
   experimental: {
     newNextLinkBehavior: false,
   },
-}
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
 
 module.exports = {
   env: {
@@ -14,5 +14,18 @@ module.exports = {
     USER_ID: process.env.USER_ID,
     PUBLIC_KEY: process.env.PUBLIC_KEY,
     GA_MEASUREMENT_ID: process.env.GA_MEASUREMENT_ID,
+  },
+  async headers() {
+    return [
+      {
+        source: "/tablatures/evora.pdf",
+        headers: [
+          {
+            key: "X-Robots-Tag",
+            value: "noindex, nofollow",
+          },
+        ],
+      },
+    ];
   },
 };

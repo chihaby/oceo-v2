@@ -1,0 +1,4 @@
+https://oceomusic.com/tablatures/evora.pdf
+
+User-agent: *
+Disallow: /tablatures/evora.pdf

@@ -1,6 +1,12 @@
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import Card from "react-bootstrap/Card";
+import Link from "next/link";
+import styles from "../styles/Tabs.module.css";
 import { useState } from "react";
 
-const SignupForm = () => {
+const Tabs = () => {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
@@ -37,34 +43,43 @@ const SignupForm = () => {
 
       const data = await response.json();
       if (data.success) {
-        alert("Check your email for the PDF download link!");
+        setMessage(
+          "Thank you for signing up! Your guitar tabs are on their way to your inbox. Be sure to check your spam/junk folder for the download link. Happy playing!"
+        );
       } else {
         alert("Error sending email: " + data.error);
       }
     } catch (error) {
       console.error("Signup error:", error);
     }
-
-    // Check response
-
-    setMessage(
-      "Signup successful! Check your email for the PDF. \n Make sure to check your spam/junk folder as well. \nHave fun!"
-    );
   };
 
   return (
-    <form onSubmit={handleSignup}>
-      <input
-        type="email"
-        placeholder="Enter your email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-        required
-      />
-      <button type="submit">Sign Up</button>
-      {message && <p>{message}</p>}
-    </form>
+    <Container>
+      <br />
+      <h1>Tabs</h1>
+      <br />
+      <div>
+        Get <b>Evora</b> guitar tabs 🎸 <br />
+        Enter your email below, and you will receive your download file via
+        email.
+        <br />
+        Plus, you'll get updates on new music, lessons, and much more.
+      </div>
+      <br />
+      <form onSubmit={handleSignup}>
+        <input
+          type="email"
+          placeholder="Enter your email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          required
+        />
+        <button type="submit">Sign Up</button>
+        {message && <p>{message}</p>}
+      </form>
+    </Container>
   );
 };
 
-export default SignupForm;
+export default Tabs;
