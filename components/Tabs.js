@@ -61,10 +61,10 @@ const Tabs = () => {
       <br />
       <div>
         Get <b>Evora</b> guitar tabs 🎸 <br />
-        Enter your email below, and you will receive a secure your download file
-        via email.
+        Enter your email below, and you will receive a link to download Evora
+        guitar tabs.
         <br />
-        Plus, you'll get updates on new music, lessons, and much more.
+        Plus, you will get updates on new music, lessons, and much more.
       </div>
       <br />
       <form onSubmit={handleSignup}>
