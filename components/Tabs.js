@@ -8,10 +8,12 @@ import { useState } from "react";
 
 const Tabs = () => {
   const [email, setEmail] = useState("");
+  const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState("");
 
   const handleSignup = async (event) => {
     event.preventDefault();
+    setLoading(true);
 
     // Save to Google Sheets
     await fetch("/api/saveToGoogleSheets", {
@@ -27,13 +29,6 @@ const Tabs = () => {
       body: JSON.stringify({ email }),
     });
 
-    // Send Email with PDF Link
-    // await fetch("/api/sendEmail", {
-    //   method: "POST",
-    //   headers: { "Content-Type": "application/json" },
-    //   body: JSON.stringify({ email }),
-    // });
-
     try {
       const response = await fetch("/api/sendEmail", {
         method: "POST",
@@ -44,13 +39,15 @@ const Tabs = () => {
       const data = await response.json();
       if (data.success) {
         setMessage(
-          "Thank you for signing up! Your guitar tabs are on their way to your inbox. Be sure to check your spam/junk folder for the download link. Happy playing!"
+          "Thank you for signing up! Your guitar tabs are on their way to your inbox.\n Be sure to check your spam/junk folder for the download link. Happy playing!"
         );
       } else {
         alert("Error sending email: " + data.error);
       }
     } catch (error) {
       console.error("Signup error:", error);
+    } finally {
+      setLoading(false); // Hide spinner when done
     }
   };
 
@@ -76,9 +73,34 @@ const Tabs = () => {
           onChange={(e) => setEmail(e.target.value)}
           required
         />
-        <button type="submit">Sign Up</button>
-        {message && <p>{message}</p>}
+        <button type="submit" disabled={loading}>
+          {loading ? "Subscribing..." : "Subscribe"}
+        </button>
       </form>
+      <div>
+        {loading && <div className="spinner"></div>}
+
+        {message && <p>{message}</p>}
+
+        <style jsx>{`
+          .spinner {
+            width: 30px;
+            height: 30px;
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid #3498db;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+          }
+          @keyframes spin {
+            0% {
+              transform: rotate(0deg);
+            }
+            100% {
+              transform: rotate(360deg);
+            }
+          }
+        `}</style>
+      </div>
     </Container>
   );
 };
