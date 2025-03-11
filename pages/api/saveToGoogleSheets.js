@@ -1,5 +1,5 @@
 import { google } from "googleapis";
-import credentials from "../../credentials/oceoCredentials.json";
+// import credentials from "../../private/oceoCredentials.json";
 
 export default async function handler(req, res) {
   if (req.method !== "POST") {
@@ -10,7 +10,8 @@ export default async function handler(req, res) {
   const SHEET_ID = process.env.GOOGLE_SHEET_ID;
 
   try {
-    console.log("Authenticating with Google Sheets API...");
+    // console.log("Authenticating with Google Sheets API...");
+    const credentials = JSON.parse(process.env.GOOGLE_CREDENTIALS);
     const auth = new google.auth.GoogleAuth({
       credentials,
       scopes: ["https://www.googleapis.com/auth/spreadsheets"],

@@ -43,3 +43,6 @@ yarn-error.log*
 
 echo ".env" >> .gitignore
 
+#Google Service Account
+private/credentials.json
+
