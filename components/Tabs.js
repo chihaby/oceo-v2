@@ -60,11 +60,12 @@ const Tabs = () => {
       <h1>Tabs</h1>
       <br />
       <div>
-        Get <b>Evora</b> guitar tabs 🎸 <br />
-        Enter your email below, and you will receive a link to download Evora
-        guitar tabs.
+        {"Get Evora guitar tabs"} 🎸 <br />
+        {
+          "Enter your email below, and you will receive a download link to your inbox"
+        }
         <br />
-        Plus, you will get updates on new music, lessons, and much more.
+        {"Plus, you will get updates on new music, lessons, and much more."}
       </div>
       <br />
       <form onSubmit={handleSignup}>
