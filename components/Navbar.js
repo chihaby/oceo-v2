@@ -16,10 +16,10 @@ const MENU_LIST = [
     text: "Music",
     href: "/music",
   },
-  {
-    text: "Tabs",
-    href: "/tabs",
-  },
+  // {
+  //   text: "Tabs",
+  //   href: "/tabs",
+  // },
   {
     text: "Contact",
     href: "/contact",
