@@ -22,7 +22,7 @@ export default async function handler(req, res) {
   const { email } = req.body;
   const timestamp = new Date().toLocaleString(); // For human-readable date-time format
   const SHEET_ID = process.env.GOOGLE_SHEET_ID;
-  // const credentials = JSON.parse(process.env.GOOGLE_CREDENTIALS);
+  const credentials = JSON.parse(process.env.GOOGLE_SERVICE_ACCOUNT_KEY);
   const location = await getLocation();
   const locationData = location
     ? location.city + ", " + location.country
@@ -31,6 +31,17 @@ export default async function handler(req, res) {
   try {
     // console.log("Authenticating with Google Sheets API...");
     const auth = new google.auth.GoogleAuth({
+      // process.env.GMAIL_API_TYPE,
+      // process.env.GMAIL_API_PROJECT_ID,
+      // process.env.GMAIL_API_PRIVATE_KEY_ID,
+      // process.env.GMAIL_API_RRIVATE_KEY,
+      // process.env.GMAIL_API_CLIENT_EMAIL,
+      // process.env.GMAIL_API_CLIENT_ID,
+      // process.env.GMAIL_API_AUTH_URI,
+      // process.env.GMAIL_API_TOKEN_URI,
+      // process.env.GMAIL_API_PROVIDER_X509_CERT_URL,
+      // process.env.GMAIL_API_CLIENT_X509_CERT_URL,
+      // process.env.GMAIL_API_UNIVERSE_DOMAIN,
       credentials,
       scopes: ["https://www.googleapis.com/auth/spreadsheets"],
     });

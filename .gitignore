@@ -47,3 +47,4 @@ echo ".env" >> .gitignore
 /private/
 
 
+*.txt
