@@ -1,19 +1,19 @@
-import { useState } from 'react';
-import { useRouter } from 'next/router';
-import styles from '../styles/contactPage.module.css';
-import emailjs from '@emailjs/browser';
-import Spinner from 'react-bootstrap/Spinner';
+import { useState } from "react";
+import { useRouter } from "next/router";
+import styles from "../styles/contactPage.module.css";
+import emailjs from "@emailjs/browser";
+import Spinner from "react-bootstrap/Spinner";
 // import Link from 'next/link';
-import Container from 'react-bootstrap/Container'
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
-import Footer from '@/components/Footer';
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import Footer from "@/components/Footer";
 
 const Contact = () => {
   const [values, setValues] = useState({
-    fullName: '',
-    email: '',
-    message: '',
+    fullName: "",
+    email: "",
+    message: "",
   });
 
   const [submitted, setSubmitted] = useState(false);
@@ -54,7 +54,7 @@ const Contact = () => {
 
   const sendEmail = () => {
     const templateParams = {
-      from_name: values.fullName,
+      name: values.fullName,
       email: values.email,
       message: values.message,
     };
@@ -67,10 +67,10 @@ const Contact = () => {
       )
       .then(
         (response) => {
-          console.log('SUCCESS!', response.status, response.text);
+          console.log("SUCCESS!", response.status, response.text);
         },
         (err) => {
-          console.log('FAILED...', err);
+          console.log("FAILED...", err);
         }
       );
     resetInputValues();
@@ -79,15 +79,15 @@ const Contact = () => {
   const resetInputValues = () => {
     setValues((values) => ({
       ...values,
-      fullName: '',
+      fullName: "",
     }));
     setValues((values) => ({
       ...values,
-      email: '',
+      email: "",
     }));
     setValues((values) => ({
       ...values,
-      message: '',
+      message: "",
     }));
     routeToThankYouPage();
   };
@@ -96,94 +96,91 @@ const Contact = () => {
 
   const routeToThankYouPage = () => {
     // e.preventDefault();
-    setSubmitted(!submitted)
+    setSubmitted(!submitted);
     setTimeout(() => {
       redirectToThankYouPage();
     }, 600);
-  }
+  };
 
   const redirectToThankYouPage = () => {
-    router.push('/thankYou');
-  } 
+    router.push("/thankYou");
+  };
 
   return (
     <div className={styles.container}>
-    <Container>
-    <br />
-    <h1>Contact</h1>
-      <Row>
-        <Col >
+      <Container>
         <br />
-          <p className={styles.paragraph}>
-            Please fill out the form below and I will reach back to you as soon
-            as possible.
-          </p>
-        <form className={styles.form} onSubmit={handleSubmit}>
-          <span>Name</span>
-          <br />
-          <input
-            className={styles.form_input}
-            type='text'
-            id='name'
-            placeholder='Your name'
-            required
-            value={values.fullName}
-            onChange={handleFullNameInputChange}
-          />
-          {submitted && !values.fullName && (
-            <span id='first-name-error'>Please enter your full name</span>
-          )}
-          <br />
-          <br />
-          <span>Email</span>
-          <br />
-          <input
-            className={styles.form_input}
-            type='email'
-            id='email'
-            placeholder='Your email'
-            required
-            value={values.email}
-            onChange={handleEmailInputChange}
-          />
-          <br />
-          <br />
-          <span>Message</span>
-          <br />
-          <textarea
-            className={styles.form_message}
-            type='text'
-            id='message'
-            placeholder='Message'
-            required
-            value={values.message}
-            onChange={handleMessageInputChange}
-          />
-          <br />
-          <br />
-          <button
-            type='subit'
-            id='btnsubmit'
-            className={styles.form_submit}
-          >
-            {' '}
-            SUBMIT
-          </button>
-          {submitted && (
-            <Spinner animation="border" role="status">
-             <span className="visually-hidden"></span>
-            </Spinner>
-          )}
-        </form>
-      </Col>
-      </Row>
-    </Container>
-    <Footer />
+        <h1>Contact</h1>
+        <Row>
+          <Col>
+            <br />
+            <p className={styles.paragraph}>
+              Please fill out the form below and I will reach back to you as
+              soon as possible.
+            </p>
+            <form className={styles.form} onSubmit={handleSubmit}>
+              <span>Name</span>
+              <br />
+              <input
+                className={styles.form_input}
+                type="text"
+                id="name"
+                placeholder="Your name"
+                required
+                value={values.fullName}
+                onChange={handleFullNameInputChange}
+              />
+              {submitted && !values.fullName && (
+                <span id="first-name-error">Please enter your full name</span>
+              )}
+              <br />
+              <br />
+              <span>Email</span>
+              <br />
+              <input
+                className={styles.form_input}
+                type="email"
+                id="email"
+                placeholder="Your email"
+                required
+                value={values.email}
+                onChange={handleEmailInputChange}
+              />
+              <br />
+              <br />
+              <span>Message</span>
+              <br />
+              <textarea
+                className={styles.form_message}
+                type="text"
+                id="message"
+                placeholder="Message"
+                required
+                value={values.message}
+                onChange={handleMessageInputChange}
+              />
+              <br />
+              <br />
+              <button
+                type="subit"
+                id="btnsubmit"
+                className={styles.form_submit}
+              >
+                {" "}
+                SUBMIT
+              </button>
+              {submitted && (
+                <Spinner animation="border" role="status">
+                  <span className="visually-hidden"></span>
+                </Spinner>
+              )}
+            </form>
+          </Col>
+        </Row>
+      </Container>
+      <Footer />
     </div>
   );
 };
 
 export default Contact;
-
-
-
