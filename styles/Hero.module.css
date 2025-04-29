@@ -6,23 +6,20 @@ Large	lg	≥992px
 Extra large	xl	≥1200px
 Extra extra large	xxl	≥1400px */
 
-
 .container {
   background-color: var(--fourth-color);
   height: 100vh;
 }
-
 .strapline {
   font-size: 35px;
   font-weight: 600;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
-
 .description {
   margin-top: 20px;
   margin-right: 50px;
 }
-
 .cta {
   margin-top: 10px;
   color: var(--fourth-color);
@@ -32,74 +29,80 @@ Extra extra large	xxl	≥1400px */
   border-radius: 6px;
   font-size: 22px;
 }
-
 .cta:hover {
   color: var(--primary-color);
   background-color: var(--fourth-color);
   font-weight: bold;
   border: 2px solid var(--primary-color);
 }
-
-.image__container div{
-    width: 100%;
-    position: unset !important;
-  }
-
+.image__container div {
+  width: 100%;
+  position: unset !important;
+}
 .image {
   object-fit: contain;
   width: 100% !important;
   position: relative !important;
   height: unset !important;
 }
+.patreon {
+  width: 150px;
+  border: 2px solid black;
+  padding: 10px;
+  display: inline-block;
+  margin-top: 20px;
+  text-align: center;
+}
 
-@media screen and (min-width: 768px){
+@media screen and (min-width: 768px) {
   .container {
     height: 45vh;
   }
-
   .hero__left {
     float: left;
     margin-top: 90px;
-
   }
-
   .hero__right {
     margin-top: 140px;
     float: right;
   }
+  .patreon {
+    width: 150px;
+    border: 2px solid black;
+    padding: 10px;
+    display: inline-block;
+    margin-top: 20px;
+    text-align: center;
+  }
 }
 
-@media screen and (min-width: 992px){
+@media screen and (min-width: 992px) {
   .container {
     height: 95vh;
   }
-
   .hero__left {
     margin-top: 70px;
   }
-
   .hero__right {
     margin-top: 50px;
   }
 }
 
-@media screen and (min-width: 1200px){
+@media screen and (min-width: 1200px) {
   .container {
     height: 90vh;
   }
 }
 
-@media screen and (min-width: 1400px){
+@media screen and (min-width: 1400px) {
   .container {
     height: 80vh;
   }
-  
   .hero__left {
     margin-top: 100px;
   }
-
   .hero__right {
     margin-top: 250px;
-    margin-left: 100px
+    margin-left: 100px;
   }
 }
