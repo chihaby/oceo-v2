@@ -40,7 +40,6 @@ const Navbar = () => {
               </span>
             </a>
           </Link>
-
           <div
             onClick={() => setNavActive(!navActive)}
             className="nav__menu-bar"

@@ -8,7 +8,7 @@ Extra extra large	xxl	≥1400px */
 
 .container {
   background-color: var(--fourth-color);
-  height: 100vh;
+  height: auto;
 }
 .strapline {
   font-size: 35px;
