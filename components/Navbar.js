@@ -21,10 +21,6 @@ const MENU_LIST = [
     href: '/tabs',
   },
   {
-    text: 'Tabs',
-    href: '/tabs',
-  },
-  {
     text: 'Contact',
     href: '/contact',
   },
