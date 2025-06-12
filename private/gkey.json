@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "evora-tabs",
+  "private_key_id": "c77a73a424c341aa131da2c7ed77d61bc9a9a88f",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCmo3UpWi49A7Nh\nSN82gEKw7bnbl+nQmaIjgKSjhpx1nOPwEdtDSmG8SleRd9+GviqZjqPst/mkYZnQ\nyjWex6bWTtWxoWFz6nBBLomXfAkyEyIQjg3EoikQhF+oPuBpWzlK3/z9ZNdkfRQr\nVc/ZZ3pR8yHNOLG/jFX5LoyIApeqO7kpcLAZBTPYJUQoLdoUDu0a+eBOPpJq/b9r\nfPHLy1QlJBq5dFVS3xHMMTiR6gIeK2MoUBSC2r0F6TGgEKjPnVGTxviVIbmgSEAj\nP5A7UoSSTAPE9ftF1qS06mJJFxvucnFzm48/nKaxgfWKuepbJVLzAy/XwT4ytliu\nie7FVmQtAgMBAAECggEAAgoEfQuwOm2k3WWHybmDV2i4PowJ6nZUJ9VlVMPgbctZ\nIHEaKeDvs9aEpvBJfGIe4Yf3BAaU+gi+hK2FUEEgdSeARszzHtbGBASUAKcvAxcF\n2Q6/JtnfJV7Ug6It30ws+kUmA44OLrNzIZFKfLwSMfPLRQ/9k4FABc98HNJdKo3e\nFDjD6O/tP3nieON7sh1M3T8xgCp28VgbA4cUzqs/v3OGYfyBKnE4TTjLzpYK+Ew0\nhfQ/7bA9yUIwgezLuHQabMkt/Fr6+7MjbZVuzfRLZIHID7QQ4PhAnVz8tiwRUIW1\naUQaYTnjwPFQNEADN8NOmxXKI7iRBOgC0EmSSPWz4QKBgQDY3LSCobEvT0wUm7Rc\nq1lfrZ+JFX0ZRQYj3CQi9ipBwl3Igb11GcW3vHev123GxPBPOY3G/f9Z+vjQi8JS\npsHtLJ8kyv8DpSOepLENCnPnK9tt6+PAAMJjNYgZDh7JxHDzlMlrLSyz9KE31pIZ\nlR3L2g7xvZI8dDBALrRVzCTfHQKBgQDEtlwjDFusSAFewjEDAFktqH7oWZfCeto4\nqsebZ00R/fbtQcNXLfv4UKSoqpKMYmZz2Tsx+BpzXYRg1Hj4HRowT31X7vvcVfPz\nx+97sYY4RbULvSx6CZa2pQTRNTAtX1bcRTswz16JP4WfQGyNhdEO7RL26fV7Z+aD\nfXzSbBU8UQKBgG+bJksUa9utM7pnZ6tJg/V5pWEnbfpTS5Wo9fAIQDcXkKxgGODr\nIpYsqGwWsqhZMlOTiyOeFIx6XRL22ksvBx7ImB6XWibGFk7O80+C0aNnLsajX9Kw\nkVn9cs1yNuYf8wFo0UAXP6pde5sBEq+Xzn3a+1Xt+hSitzJQ1v5Q0akBAoGAKIkv\nqWVFitX3ulAoC2dJ+TeslzLHLCNmzqCaq3J5FkkQVknj+BYYw03S8JLdyiII3Lya\nDy0CPl26Br4iA3bzy5rFyJYNvpTTxZugxQuLDhOHQFkGTkuljBOrT3U3bVIlMxTt\nIpzI7V1yqqN6+xrlPr8p1knV9U0u2k/EphPxuFECgYAA41YRtZTyutOftn4nBEhl\nM8H1n5bB/0zSmye4HuPk1Q7dwXiFO3EezxkELSLfTr3IjaxWh7cWdzoTDZhn4Gdp\nS4Gp8W6sHmlc4qs7/wVDQNqksj43Kl+aZtY6qVML7lwhzqfFObx6ASnWQuaE9M0G\nIgJjMV6WFfrvGjF8+Lg5VQ==\n-----END PRIVATE KEY-----\n",
+  "client_email": "evora-228@evora-tabs.iam.gserviceaccount.com",
+  "client_id": "105577619400483321033",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/evora-228%40evora-tabs.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
