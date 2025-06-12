@@ -45,5 +45,3 @@ echo ".env" >> .gitignore
 
 #Google Service Account
 
-
-*.txt
