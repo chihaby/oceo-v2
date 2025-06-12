@@ -14,7 +14,7 @@ export default async function handler(req, res) {
     const decoded = jwt.verify(token, process.env.JWT_SECRET);
 
     // Get file path
-    const filePath = path.resolve("./private/tablatures/evora.pdf");
+    const filePath = path.resolve("./private/tablatures/oceo-evora-tabs.pdf");
 
     // Check if the file exists
     if (!fs.existsSync(filePath)) {
@@ -23,7 +23,10 @@ export default async function handler(req, res) {
 
     // Send file as a response
     res.setHeader("Content-Type", "application/pdf");
-    res.setHeader("Content-Disposition", "attachment; filename=evora.pdf");
+    res.setHeader(
+      "Content-Disposition",
+      "attachment; filename=oceo-evora-tabs.pdf"
+    );
 
     const fileStream = fs.createReadStream(filePath);
     fileStream.pipe(res);
