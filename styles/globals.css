@@ -55,12 +55,13 @@ header {
   flex-direction: column;
   row-gap: 6px;
   cursor: pointer;
+
 }
 
 .nav__menu-bar div {
   width: 40px;
   height: 4px;
-  background-color: black;
+  background-color: white;
   border-radius: 2px;
 }
 
@@ -74,11 +75,11 @@ header {
   display: flex;
   flex-direction: column;
   position: fixed;
-  top: 60px;
-  width: 288px;
-  row-gap: 24px;
+  top: 100px;
+  width: 100%;
+  row-gap: 48px;
   padding: 24px 16px;
-  right: -288px;
+  right: -100%;
   min-height: calc(100vh - 60px);
   background-color: var(--third-color);
   transition: all 0.3s;
