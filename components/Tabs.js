@@ -6,7 +6,7 @@ import Container from "react-bootstrap/Container";
 // import styles from "../styles/Tabs.module.css";
 import { useState } from "react";
 
-const Tabs = (email, downloadUrl) => {
+const Tabs = (downloadUrl) => {
   const [email, setEmail] = useState("");
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState("");
