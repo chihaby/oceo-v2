@@ -51,16 +51,22 @@ const Tabs = (downloadUrl) => {
       }
     } catch (error) {
       console.error("Signup error:", error);
-      window.location.href = downloadUrl;
     } finally {
       setLoading(false); // Hide spinner when done
     }
 
     async function getClientLocation() {
       try {
-        // Use a client-side geolocation API
+        console.log("Fetching location from ipapi.co...");
         const response = await fetch("https://ipapi.co/json/");
+
+        if (!response.ok) {
+          console.error("Location API error:", response.status);
+          throw new Error("Location fetch failed");
+        }
+
         const data = await response.json();
+        console.log("Location data received:", data);
 
         return {
           city: data.city || "Unknown",
