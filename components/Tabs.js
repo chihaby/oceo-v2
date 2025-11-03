@@ -13,9 +13,9 @@ const Tabs = (downloadUrl) => {
 
   const handleSignup = async (event) => {
     event.preventDefault();
-
     setLoading(true);
 
+    const locationData = await getClientLocation();
     // Save to Google Sheets
     await fetch("/api/saveToGoogleSheets", {
       method: "POST",
