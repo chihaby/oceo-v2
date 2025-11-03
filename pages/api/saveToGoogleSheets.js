@@ -1,11 +1,29 @@
 import { google } from "googleapis";
 
 export default async function handler(req, res) {
+  // Add CORS headers if needed
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type");
+
+  // Handle OPTIONS preflight request
+  if (req.method === "OPTIONS") {
+    return res.status(200).end();
+  }
+
   if (req.method !== "POST") {
+    console.log("Received method:", req.method); // DEBUG
     return res.status(405).json({ error: "Method Not Allowed" });
   }
 
+  console.log("Request body:", req.body); // DEBUG
+
   const { email, location } = req.body;
+
+  if (!email) {
+    return res.status(400).json({ error: "Email is required" });
+  }
+
   const timestamp = new Date().toLocaleString();
   const SHEET_ID = process.env.GOOGLE_SHEET_ID;
   const credentials = JSON.parse(process.env.GOOGLE_SERVICE_ACCOUNT_KEY);

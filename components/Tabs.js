@@ -6,7 +6,7 @@ import Container from "react-bootstrap/Container";
 // import styles from "../styles/Tabs.module.css";
 import { useState } from "react";
 
-const Tabs = () => {
+const Tabs = (email, downloadUrl) => {
   const [email, setEmail] = useState("");
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState("");
@@ -20,7 +20,7 @@ const Tabs = () => {
     await fetch("/api/saveToGoogleSheets", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ email }),
+      body: JSON.stringify({ email, location: locationData }),
     });
 
     // Save to Mailchimp
@@ -51,6 +51,7 @@ const Tabs = () => {
       }
     } catch (error) {
       console.error("Signup error:", error);
+      window.location.href = downloadUrl;
     } finally {
       setLoading(false); // Hide spinner when done
     }
