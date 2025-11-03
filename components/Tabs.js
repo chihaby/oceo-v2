@@ -1,53 +1,83 @@
-import Container from 'react-bootstrap/Container';
+import Container from "react-bootstrap/Container";
 // import Row from "react-bootstrap/Row";
 // import Col from "react-bootstrap/Col";
 // import Card from "react-bootstrap/Card";
 // import Link from "next/link";
 // import styles from "../styles/Tabs.module.css";
-import { useState } from 'react';
+import { useState } from "react";
 
 const Tabs = () => {
-  const [email, setEmail] = useState('');
+  const [email, setEmail] = useState("");
   const [loading, setLoading] = useState(false);
-  const [message, setMessage] = useState('');
+  const [message, setMessage] = useState("");
 
   const handleSignup = async (event) => {
     event.preventDefault();
+
     setLoading(true);
 
     // Save to Google Sheets
-    await fetch('/api/saveToGoogleSheets', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+    await fetch("/api/saveToGoogleSheets", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email }),
     });
 
     // Save to Mailchimp
-    await fetch('/api/saveToMailchimp', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+    await fetch("/api/saveToMailchimp", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email }),
     });
 
     try {
-      const response = await fetch('/api/sendEmail', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email }),
+      // Get client's location data
+      const locationData = await getClientLocation();
+
+      // Send to your API
+      const response = await fetch("/api/sendEmail", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, location: locationData }),
       });
 
       const data = await response.json();
       if (data.success) {
         setMessage(
-          'Thank you for signing up! Your guitar tabs are on their way to your inbox.\n Be sure to check your spam/junk folder for the download link. Happy playing!'
+          "Thank you for signing up! Your guitar tabs are on their way to your inbox.\n Be sure to check your spam/junk folder for the download link. Happy playing!"
         );
       } else {
-        alert('Error sending email: ' + data.error);
+        alert("Error sending email: " + data.error);
       }
     } catch (error) {
-      console.error('Signup error:', error);
+      console.error("Signup error:", error);
     } finally {
       setLoading(false); // Hide spinner when done
+    }
+
+    async function getClientLocation() {
+      try {
+        // Use a client-side geolocation API
+        const response = await fetch("https://ipapi.co/json/");
+        const data = await response.json();
+
+        return {
+          city: data.city || "Unknown",
+          region: data.region || "Unknown",
+          country: data.country_name || "Unknown",
+          countryCode: data.country_code || "Unknown",
+          ip: data.ip || "Unknown",
+        };
+      } catch (error) {
+        console.error("Error fetching location:", error);
+        return {
+          city: "Unknown",
+          region: "Unknown",
+          country: "Unknown",
+          countryCode: "Unknown",
+          ip: "Unknown",
+        };
+      }
     }
   };
 
@@ -57,28 +87,28 @@ const Tabs = () => {
       <h1>Tabs</h1>
       <br />
       <div>
-        {'Get Evora guitar tabs'} 🎸 <br />
+        {"Get Evora guitar tabs"} 🎸 <br />
         {
-          'Enter your email below, and you will receive a download link to your inbox'
+          "Enter your email below, and you will receive a download link to your inbox"
         }
         <br />
-        {'Plus, you will get updates on new music, lessons, and much more.'}
+        {"Plus, you will get updates on new music, lessons, and much more."}
       </div>
       <br />
       <form onSubmit={handleSignup}>
         <input
-          type='email'
-          placeholder='Enter your email'
+          type="email"
+          placeholder="Enter your email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
         />
-        <button type='submit' disabled={loading}>
-          {loading ? 'Subscribing...' : 'Get Tabs'}
+        <button type="submit" disabled={loading}>
+          {loading ? "Subscribing..." : "Get Tabs"}
         </button>
       </form>
       <div>
-        {loading && <div className='spinner'></div>}
+        {loading && <div className="spinner"></div>}
 
         {message && <p>{message}</p>}
 
